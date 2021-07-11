@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -13,19 +14,13 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", { useNewUrlParser: true });
 
-db.User.create({ name: "Ernest Hemingway" })
-  .then(dbUser => {
-    console.log(dbUser);
-  })
-  .catch(({ message }) => {
-    console.log(message);
-  });
+;
 
-app.get("/notes", (req, res) => {
+/* app.get("/notes", (req, res) => {
   db.Note.find({})
     .then(dbNote => {
       res.json(dbNote);
@@ -70,7 +65,7 @@ app.get("/populateduser", (req, res) => {
   .catch(err => {
     res.json(err);
   });
-});
+}); */
 
 // Start the server
 app.listen(PORT, () => {
