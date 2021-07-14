@@ -107,13 +107,5 @@ function populateChart(data) {
   });
 }
 
-/* fetch("/api/workouts/range")
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    populateChart(data);
-  }); */
-
 // get all workout data from back-end
 API.getWorkoutsInRange().then(populateChart);
