@@ -2,9 +2,11 @@ const db = require('../../models');
 const router = require('express').Router();
 // App.get to pull up info for the workouts page
 router.get("/", (req, res) => {
-    db.Workout.find({}).then(dbWorkout => {
-        res.json(dbWorkout);
-    })
+    db.Workout.find({})
+        
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
         .catch(err => {
             res.status(400).json(err);
         });
