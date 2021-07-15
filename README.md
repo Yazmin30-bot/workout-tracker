@@ -77,7 +77,7 @@
 
 ## Links
   * The URL of the deployed application.
-  [https://invulnerable-baguette-18839.herokuapp.com/?id=60efe1ebc5ab8200155c54fd/](https://invulnerable-baguette-18839.herokuapp.com/?id=60efe1ebc5ab8200155c54fd/)
+  [https://invulnerable-baguette-18839.herokuapp.com/](https://invulnerable-baguette-18839.herokuapp.com/)
   * The URL of the GitHub repository.                                         [https://github.com/Yazmin30-bot/workout-tracker/](https://github.com/Yazmin30-bot/workout-tracker/)
 
 ## Author 
